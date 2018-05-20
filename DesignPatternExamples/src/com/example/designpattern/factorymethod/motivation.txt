@@ -1,0 +1,30 @@
+public abstract class JUnit_Framework_Testcase {
+	
+	public abstract void testAddAboveRoot() {
+	}
+}
+
+public class DOMBuilderTest extends JUnit_Framework_Testcase {
+
+	public void testAddAboveRoot() {
+		// ... 동일한 코드 ...
+		
+		OutputBuilder outputBuilder = new DOMBuilder("orders");
+		
+		// ... 동일한 코드 ...
+	}
+
+}
+
+public class XMLBuilderTest extends JUnit_Framework_Testcase {
+
+	public void testAddAboveRoot() {
+		// ... 동일한 코드 ...
+		
+		OutputBuilder outputBuilder = new XMLBuilder("orders");
+		
+		// ... 동일한 코드 ...
+	}
+
+}
+
