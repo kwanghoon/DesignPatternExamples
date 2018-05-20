@@ -1,0 +1,17 @@
+   class Light {
+     private static final int ON  = 0;
+     private static final int OFF = 1;
+     private int state;
+
+     public Light() { state = OFF; }
+
+     public void on_button() {
+       if (state == ON) { /* do nothing */ }
+       else { state = ON; }
+     }
+
+     public void off_button() {
+       if (state == ON) { state = OFF; }
+       else { /* do nothing */ }
+     }
+   }  

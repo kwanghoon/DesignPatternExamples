@@ -1,0 +1,38 @@
+   컴포지트 패턴을 적용하지 않고 
+  컴퓨터 클래스를 설계하고
+  이 클래스를 사용하는 클라이언트 클래스를 설계할 때
+  다음과 같이 작성할 수 있다.
+   
+   public class Computer {
+     private Body body;
+     private Keyboard keyboard;
+     private Monitor monitor;
+
+     public void addBody(Body body) { this.body = body; }
+     public void addKeyboard(Keyboard keyboard) { this.keyboard = keyboard; }
+     public void addMonitor(Monitor monitor) { this.monitor = monitor; }
+
+     public int getPrice() {
+      return body.getPrice() + keyboard.getPrice() + monitor.getPrice(); 
+     }
+
+     public int getPower() {
+      return body.getPower() + keyboard.getPower() + monitor.getPower(); 
+     }
+   }
+
+   public class Client {
+     public static void main(String[] args) {
+      Body body = new Body(...);
+      Keyboard keyboard = new Keyboard(...);
+      Monitor monitor = new Monitor(...);
+
+      Computer computer = new Computer();
+      computer.addBody(body);
+      computer.addKeyboard(keyboard);
+      computer.addMonitor(monitor);
+
+      System.out.println( computer.getPrice() );
+      System.out.println( computer.getPower() );
+     }
+   }
