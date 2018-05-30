@@ -10,6 +10,10 @@ public class Light {
 	public void setState(State state) {
 		this.state = state;
 	}
+	
+	public State getState() {
+		return state;
+	}
 
 	public void on_button() {
 		state.on_button(this);;
