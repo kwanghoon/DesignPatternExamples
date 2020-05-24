@@ -9,9 +9,7 @@ public class Main {
 				new ClassBAdapter()
 		};
 		
-		for (ClassA elem : arr) {
-			elem.request();
-		}
+		Client.request(arr);
 
 	}
 
