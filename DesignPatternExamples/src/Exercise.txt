@@ -42,6 +42,13 @@
     Light가 켜진 상태에서 다시 ON 버튼을 누르면 SLEEP 상태로 변경되고,
     SLEEP 상태에서 ON 버튼을 누르면 켜진 상태로 돌아온다.
     SLEEP 상태에서 OFF 버튼을 누르면 Light를 끈다.
-    
+
+9. Decorator 디자인 패턴
+
+  - CrossingDecorator 클래스를 추가하시오.
+  
+  - Client 클래스에 다음 조합을 추가하시오.
+     Display roadWithCrossingAndLaneAndTraffic = new LaneDecorator(new TrafficDecorator(new CrossingDecorator (new RoadDisplay))));
+     roadWithCrossingAndLaneAndTraffic.draw();    
     
     
